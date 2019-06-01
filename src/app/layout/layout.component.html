@@ -1,0 +1,20 @@
+<!-- Header -->
+<div class="cover-image-gv">
+  <div class="banner-overlay global">
+    <div class="global-logo">
+      <img class="global-logo-img logo" src={{logoPath}} alt="Global Volunteer Logo">
+    </div>
+  </div>
+</div>
+<!-- Body content -->
+<div *ngIf="translateService.applicationData" class="global-body gv-body">
+  <app-headline></app-headline>
+  <app-body-content></app-body-content>
+  <app-v-log></app-v-log>
+  <app-volunteer-brief></app-volunteer-brief>
+  <app-steps-to-connect></app-steps-to-connect>
+</div>
+<!-- Footer -->
+<footer>
+  <app-footer *ngIf="translateService.applicationData"></app-footer>
+</footer>

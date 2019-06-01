@@ -1,0 +1,80 @@
+<div class="hidden-md-down">
+    <div class="container">
+        <div class="desc">
+            <h6>{{ translateService.applicationData && translateService.applicationData['key00'] && translateService.applicationData['key00'][translateService.currentLanguage] }}
+            </h6>
+            <p> {{translateService.applicationData['key80'][translateService.currentLanguage]}}</p>
+        </div>
+
+        <div class="about">
+            <h6>{{translateService.applicationData['key1950'][translateService.currentLanguage]}}</h6>
+            <a routerlink="/about-us"> {{translateService.applicationData['key1920'][translateService.currentLanguage]}}
+            </a>
+            <a href="#"> {{translateService.applicationData['key1951'][translateService.currentLanguage]}} </a>
+            <a href="#"> {{translateService.applicationData['key1952'][translateService.currentLanguage]}} </a>
+            <a href="#"> {{translateService.applicationData['key1953'][translateService.currentLanguage]}} </a>
+            <a href="#" target="_blank">
+                Annual
+                Report </a>
+        </div>
+
+        <div class="contact">
+            <h6>{{translateService.applicationData['key1954'][translateService.currentLanguage]}} </h6>
+            <a>{{translateService.applicationData['key1955'][translateService.currentLanguage]}} </a>
+            <a>{{translateService.applicationData['key1956'][translateService.currentLanguage]}} </a>
+            <a>{{translateService.applicationData['key1957'][translateService.currentLanguage]}} </a>
+            <a>{{translateService.applicationData['key1959'][translateService.currentLanguage]}} </a>
+            <a>{{translateService.applicationData['key1958'][translateService.currentLanguage]}} </a>
+        </div>
+
+        <div class="partners">
+            <h6> {{translateService.applicationData['key1960'][translateService.currentLanguage]}} </h6>
+            <a href="#"> {{translateService.applicationData['key1961'][translateService.currentLanguage]}} </a>
+            <a href="#"> {{translateService.applicationData['key1955'][translateService.currentLanguage]}} </a>
+            <a href="#"> {{translateService.applicationData['key1956'][translateService.currentLanguage]}} </a>
+            <a href="#"> {{translateService.applicationData['key1957'][translateService.currentLanguage]}} </a>
+            <a href="#"> {{translateService.applicationData['key1962'][translateService.currentLanguage]}} </a>
+        </div>
+
+        <div class="membership">
+            <h6> {{translateService.applicationData['key1963'][translateService.currentLanguage]}} </h6>
+            <a> {{translateService.applicationData['key1964'][translateService.currentLanguage]}} </a>
+            <a> {{translateService.applicationData['key1965'][translateService.currentLanguage]}} </a>
+            <a href="#" target="_blank">
+                {{translateService.applicationData['key1966'][translateService.currentLanguage]}} </a>
+        </div>
+    </div>
+
+    <div class="container">
+        <span>
+            © {{translateService.applicationData['key1967'][translateService.currentLanguage]}} 2018
+        </span>
+        <span>
+            <a href="#" target="_blank">
+                {{translateService.applicationData['key1968'][translateService.currentLanguage]}} </a>
+        </span>
+        <span>
+            <a href="#" target="_blank">
+                {{translateService.applicationData['key1969'][translateService.currentLanguage]}} </a>
+        </span>
+        <span></span>
+        <span class="social-footer">
+            <a href="#" target="_blank"><i class="cm cm-facebook"></i></a>
+            <a href="#" target="_blank"><i class="cm cm-instagram"></i></a>
+            <a href="#" target="_blank"><i class="cm cm-twitter"></i></a>
+            <a href="#" target="_blank"><i class="cm cm-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="cm cm-youtube"></i></a>
+        </span>
+        <span>
+            <div class="select-box-custom">
+                <div class="custom-footer-select dropup">
+                    <select class="language-options" name="type" 
+                    [(ngModel)]="translateService.currentLanguage" 
+                    (change)="onLanguageChange($event.target.value)">
+                        <option *ngFor="let language of translateService.languages" [ngValue]="language">{{language}}</option>
+                    </select>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>
