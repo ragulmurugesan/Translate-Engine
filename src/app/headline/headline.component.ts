@@ -7,7 +7,7 @@ import { TranslateService } from '../services/translate.service';
 })
 export class HeadlineComponent implements OnInit {
 
-  constructor(private translateService: TranslateService) { }
+  constructor(public translateService: TranslateService) { }
 
   ngOnInit() { }
 
