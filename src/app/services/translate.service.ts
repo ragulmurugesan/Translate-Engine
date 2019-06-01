@@ -16,7 +16,9 @@ export class TranslateService {
    * Property to hold the user's active language
    */
   public currentLanguage: string;
-
+  /**
+   * List of available languages
+   */
   public languages: string[] = ['English', 'French', 'Spanish', 'Portuguese', 'German', 'Mandarin'];
 
   constructor(private Http: HttpClient) {
@@ -24,7 +26,7 @@ export class TranslateService {
     this.loadLanguages();
   }
   /**
-   * Method to obtain the user preferred language
+   * Method to obtain the user preferred language and also the preset language
    */
   setDefaultLanguage() {
     let presetLang = localStorage.getItem('gb_lang');
@@ -58,7 +60,10 @@ export class TranslateService {
         }
       );
   }
-
+  /**
+   * Method to store the user preferred language in local storage
+   * @param language Receives the chosen language from footer component
+   */
   storeLanguage(language) {
     localStorage.setItem('gb_lang', language);
   }

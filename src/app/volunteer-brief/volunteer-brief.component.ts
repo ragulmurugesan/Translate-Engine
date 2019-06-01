@@ -3,8 +3,7 @@ import { TranslateService } from '../services/translate.service';
 
 @Component({
   selector: 'app-volunteer-brief',
-  templateUrl: './volunteer-brief.component.html',
-  styleUrls: ['./volunteer-brief.component.scss']
+  templateUrl: './volunteer-brief.component.html'
 })
 export class VolunteerBriefComponent implements OnInit {
 

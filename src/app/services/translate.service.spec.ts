@@ -1,9 +1,9 @@
-import { TestBed, getTestBed } from '@angular/core/testing';
+import { TestBed, getTestBed, ComponentFixture } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TranslateService } from './translate.service';
 
 
-fdescribe('TranslateService', () => {
+describe('TranslateService', () => {
   let httpMock: HttpTestingController;
   beforeEach(() => TestBed.configureTestingModule({
     imports: [HttpClientTestingModule]
@@ -20,7 +20,7 @@ fdescribe('TranslateService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should be obtain the language data', async () => {
+  it('should obtain the language data', async () => {
     const service: TranslateService = TestBed.get(TranslateService);
     const langData = {
       "key2080": {
@@ -38,4 +38,11 @@ fdescribe('TranslateService', () => {
     service.loadLanguages();
     expect(service.applicationData).toEqual(langData);
   });
+
+  it('should assign the current active language', () => {
+    const service: TranslateService = TestBed.get(TranslateService);
+    service.setDefaultLanguage();
+    expect(service.currentLanguage).not.toBeUndefined();
+  });
+
 });

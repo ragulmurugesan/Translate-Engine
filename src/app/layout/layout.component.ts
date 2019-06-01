@@ -3,8 +3,7 @@ import { TranslateService } from '../services/translate.service';
 
 @Component({
   selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  templateUrl: './layout.component.html'
 })
 export class LayoutComponent implements OnInit {
   /**

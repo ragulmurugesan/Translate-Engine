@@ -3,8 +3,7 @@ import { TranslateService } from '../services/translate.service';
 
 @Component({
   selector: 'app-steps-to-connect',
-  templateUrl: './steps-to-connect.component.html',
-  styleUrls: ['./steps-to-connect.component.scss']
+  templateUrl: './steps-to-connect.component.html'
 })
 export class StepsToConnectComponent implements OnInit {
 
