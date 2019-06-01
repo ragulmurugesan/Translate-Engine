@@ -3,7 +3,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { TranslateService } from './translate.service';
 
 
-describe('TranslateService', () => {
+fdescribe('TranslateService', () => {
   let httpMock: HttpTestingController;
   beforeEach(() => TestBed.configureTestingModule({
     imports: [HttpClientTestingModule]

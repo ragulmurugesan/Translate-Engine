@@ -3,7 +3,6 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { FooterComponent } from './footer.component';
 import { FormsModule } from '@angular/forms';
 import { Component, Injectable } from '@angular/core';
-import { TranslateService } from '../services/translate.service';
 /* Mock Tranlsate service */
 @Injectable({
   providedIn: 'root'
@@ -23,7 +22,7 @@ class mockTranslateService {
   };
 }
 
-fdescribe('FooterComponent', () => {
+describe('FooterComponent', () => {
   let component: FooterComponent;
   let service: mockTranslateService;
   let httpMock: HttpTestingController;
@@ -32,13 +31,15 @@ fdescribe('FooterComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [FooterComponent],
-      imports: [FormsModule, HttpClientTestingModule]
+      imports: [FormsModule, HttpClientTestingModule],
+      providers: [mockTranslateService]
     })
-      .overrideComponent(FooterComponent, {
-        set: {
-          providers: [{ provide: TranslateService, useClass: mockTranslateService }]
-        }
-      });
+      .compileComponents();
+    // .overrideComponent(FooterComponent, {
+    //   set: {
+    //     providers: [{ provide: TranslateService, useClass: mockTranslateService }]
+    //   }
+    // });
   }));
 
   beforeEach(() => {

@@ -42,7 +42,7 @@ class MockLayoutComponent5 { }
 })
 class MockLayoutComponent6 { }
 
-describe('LayoutComponent', () => {
+fdescribe('LayoutComponent', () => {
   let component: LayoutComponent;
   let service: mockTranslateService;
   let fixture: ComponentFixture<LayoutComponent>;
@@ -80,7 +80,7 @@ describe('LayoutComponent', () => {
     component.logoPath = "";
     fixture.detectChanges();
     const compiled: HTMLElement = fixture.debugElement.nativeElement;
-    let imageHeight = compiled.querySelector('.global-logo-img');
+    let imageHeight = compiled.querySelector('.global-logo-img').clientHeight;
     expect(imageHeight).not.toBeGreaterThan(30);
   });
 });

@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 class MockLayoutComponent { }
 
-describe('AppComponent', () => {
+fdescribe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
